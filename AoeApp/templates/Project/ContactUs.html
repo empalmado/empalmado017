@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AoeFreeQuotation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+        .navbar {
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+     
+     .jumbotron {
+      margin-bottom: 5px;
+     font-family: serif;
+    }
+   
+    footer {
+      background-color: lightgrey;
+      padding: 25px;
+    }
+
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href={% url 'home' %}>Home</a></li>
+          <li><a href={% url 'freequotation' %}>Free Quotation</a></li>
+          <li><a href={% url 'about' %}>About Us</a></li>
+          <li><a href={% url 'contact' %}>Contact Us</a></li>
+          <li><a href={% url 'table1' %}>Quotation Table</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>AOE Free Quotation</h1>
+      <h4>We do all kinds of stainless products</h4>      
+    </div>
+  </div>
+  <center><h2>CONTACT US</h2>
+  
+    <h4>If you want our product please email or contact us to this phone number or message us on our FB page.Thank you!</h4>
+  </center>
+
+
+  <div class="container text-left">    
+    <h3><span class="glyphicon glyphicon-earphone"><br> Contact: <b>Smart-0928-855-6770, Globe-0955-461-4113</b> </span></h3>
+    <h3><span class="glyphicon glyphicon-envelope"> <br>Email: <b>ews@gmail.com</b></span></h3>
+    <h3><span class="glyphicon glyphicon-thumbs-up"> <br>Like and Follow our FB page:<b> Empalmado's Welding Shop</b></span></h3>
+
+        <br><br>
+  </div>
+  {% load static %} 
+  <div class="container text-center">    
+    <h3>Products</h3>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="panel-body"><img src="{% static "dj_app/media/grillerandfryer.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <p>Griller and Fryer</p>
+      </div>
+      <div class="col-sm-2"> 
+        <div class="panel-body"><img src="{% static "dj_app/media/gastove1.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <p>Gastove</p>    
+      </div>
+      <div class="col-sm-2"> 
+        <div class="panel-body"><img src="{% static "dj_app/media/grillerwstand.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <p>Griller w/ stand</p>
+      </div>
+      <div class="col-sm-2"> 
+        <div class="panel-body"><img src="{% static "dj_app/media/platerock.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <p>Plate Rack</p>
+      </div> 
+      <div class="col-sm-2"> 
+        <div class="panel-body"><img src="{% static "dj_app/media/steam.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <p>Steamer</p>
+      </div>     
+      <div class="col-sm-2"> 
+        <div class="panel-body"><img src="{% static "dj_app/media/table.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <p>Stainless Table</p>
+      </div> 
+    </div>
+  </div><br>
+
+
+
+
+  <!-- <footer class="container-fluid text-center">
+
+    <form class="form-inline">
+        <p>(some products are order to made)</p>
+        <p>We also made a customize stainless product.</p>
+    </form>
+  </footer> -->
+
+</body>
+</html>

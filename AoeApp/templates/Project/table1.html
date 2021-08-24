@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AoeFreeQuotation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+    .navbar {
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+     
+     .jumbotron {
+      margin-bottom: 5px;
+     font-family: serif;
+    }
+   
+    footer {
+      background-color: lightgrey;
+      padding: 25px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+ 
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href={% url 'home' %}>Home</a></li>
+            <li><a href={% url 'freequotation' %}>Free Quotation</a></li>
+            <li><a href={% url 'about' %}>About Us</a></li>
+            <li><a href={% url 'contact' %}>Contact Us</a></li>
+          </ul>
+            <ul class="nav navbar-nav">
+              <li><a href={% url 'table1' %}>Quotation Table</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>AOE Free Quotation</h1>   
+      <h4>Admin Page</h4>    
+    </div>
+  </div>
+<body>
+
+<div class="container">
+  <h2>Free Quotation</h2>   
+  <form action="" method="POST">                                                                 
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th>Contact</th>
+          <th>Date</th> 
+          <th>Details</th>
+          <th>Quantity</th>
+          <th>Files</th>
+          <th>Status</th> 
+          <th>Update</th> 
+        </tr>
+      </thead>
+      <tbody>
+        {% for table in table %}
+        <tr>
+          <td>{{ table.Name }}</td>
+          <td>{{ table.Address }}</td>
+          <td>{{ table.Email }}</td>
+          <td>{{ table.Contact }}</td>
+          <td>{{ table.Date }}</td>
+          <td>{{ table.Details }}</td>
+          <td>{{ table.Quantity }}</td>
+          <td>{{ table.File}}</td>
+          <td>{{ table.status }}</td>
+          <td><a href="{% url 'update' table.id %}">Edit</td>
+          {% endfor %}
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AoeFreeQuotation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+    .navbar {
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+     
+     .jumbotron {
+      margin-bottom: 5px;
+     font-family: serif;
+    }
+   
+    footer {
+      background-color: lightgrey;
+      padding: 25px;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+
+ 
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href={% url 'home' %}>Home</a></li>
+          <li><a href={% url 'freequotation' %}>Free Quotation</a></li>
+          <li><a href={% url 'about' %}>About Us</a></li>
+          <li><a href={% url 'contact' %}>Contact Us</a></li>
+          <li><a href={% url 'table1' %}>Quotation Table</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></li>
+          <li><a href="{% url 'register' %}" class="ml-2">Sign Up</a></li>
+
+          <!-- <li><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></li> -->
+        </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>AOE Free Quotation</h1>     
+      <h4>We do all kinds of stainless products</h4> 
+    </div>
+  </div>
+  <br>
+  {% load static %} 
+  <center><h4>PRODUCTS</h4></center>
+  <div class="container">    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Griller and Fryer</div>
+          <div class="panel-body"><img src="{% static "dj_app/media/grillerandfryer.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">₱ 2, 500</div>
+        </div>
+      </div>
+    
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">Gastove</div>
+          <div class="panel-body"><img src="{% static "dj_app/media/gastove1.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">₱ 3, 000</div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">Griller w/ Stand</div>
+          <div class="panel-body"><img src="{% static "dj_app/media/grillerwstand.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">2, 500</div>
+        </div>
+      </div>
+    </div>
+  </div><br>
+  
+  <div class="container">    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Plate Rack</div>
+          <div class="panel-body"><img src="{% static "dj_app/media/platerock.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">₱ 1, 200</div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">Steamer</div>
+          <div class="panel-body"><img src="{% static "dj_app/media/steam.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">₱ 2, 500</div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">Stainless Table</div>
+          <div class="panel-body"><img src="{% static "dj_app/media/table.jpg" %}" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">₱ 5, 000</div>
+        </div>
+      </div>
+    </div>
+
+  </div><br><br>
+  
+  <footer class="container-fluid text-center">
+
+    <form class="form-inline">
+        <p>If you want some of our products and works please go to Contact Us page</p>
+        <p>(some products are order to made)</p>
+        <p>We also made a customize stainless product.</p>
+    </form>
+  </footer>
+  
+  </body>
+  </html>
+  

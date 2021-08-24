@@ -1,0 +1,15 @@
+{% extends 'Project/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container text-left">
+  <center><h4>Free Quotation</h4></center>
+  <form class="site-form" action="" method="POST" enctype="multipart/form-data">
+    <p>Please include the material decsription in details box.</p>
+    {% csrf_token %}
+    {{ form|crispy }}
+  <button type="submit" class="btn btn-primary">SUBMIT</button><br><br>
+    </form>
+</div>
+
+{% endblock %}

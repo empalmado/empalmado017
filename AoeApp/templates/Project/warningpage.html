@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>AoeFreeQuotation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+       
+    
+<style>
+
+    .navbar {
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+           
+    .jumbotron {
+        margin-bottom: 5px;
+        font-family: serif;
+    }
+
+      
+        </style>
+      </head>
+<body>
+     <center> 
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href={% url 'home' %}>Home</a></li>
+    
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+           
+            </div>
+          </div>
+        </nav>
+        <div class="jumbotron">
+          <div class="container text-center">
+            <h1>AOE Free Quotation</h1>
+            <h4>We do all kinds of stainless products</h4>       
+          </div>
+        </div><br><br>
+
+        <h1><p class="text-danger">YOU DON'T HAVE PERMISSION TO THIS PAGE!!!</p></h1>
+        <h1><p class="text-warning">YOU DON'T HAVE PERMISSION TO THIS PAGE!!!</p></h1>
+        <h1><p class="text-present">YOU DON'T HAVE PERMISSION TO THIS PAGE!!!</p></h1>
+
+
+</center>
+</body>
+
+</html>
